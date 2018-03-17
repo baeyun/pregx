@@ -2,7 +2,7 @@ var path = require('path'),
 	webpack = require('webpack');
 
 module.exports = {
-	entry: path.resolve(__dirname) + '/src/pregx.js',
+	entry: path.resolve(__dirname) + '/index.js',
 	
 	output: {
 		path: path.resolve(__dirname) + '/dist',
