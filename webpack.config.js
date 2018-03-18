@@ -7,7 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname) + '/dist',
 		publicPath: '/dist',
-		filename: 'bundle.js'
+		filename: 'pregx.js'
 	},
 	
 	module: {
@@ -21,11 +21,11 @@ module.exports = {
 		]
 	},
 
-	// plugins: [
-	// 	new webpack.optimize.UglifyJsPlugin({
-	// 		include: /\.min\.js$/,
-	// 		minimize: true,
-	// 		compress: true
-	// 	})
-	// ]
+	/*plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			include: /\.min\.js$/,
+			minimize: true,
+			compress: true
+		})
+	]*/
 };
