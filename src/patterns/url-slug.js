@@ -1,12 +1,8 @@
 /*
  * Pattern for matching URL slugs
  */
-export default (str, config) => {
-	let pattern = '[a-z0-9-]+',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser( str, '[a-z0-9-]+', config || null )

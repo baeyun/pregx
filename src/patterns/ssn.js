@@ -9,15 +9,13 @@
  *
  * Non-matches:
  * 		555---60--4444
- *
- * @credit JavaScript Cookbook by Shelley Powers <http://shop.oreilly.com/>
  */
-export default (str, config) => {
-	let pattern = '\d{3}-\d{2}-\d{4}',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'\d{3}-\d{2}-\d{4}',
+		config || null
+	)

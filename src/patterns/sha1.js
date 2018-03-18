@@ -1,12 +1,12 @@
 /*
  * Pattern for matching SHA1 hashes
  */
-export default (str, config) => {
-	let pattern = '\b[A-Fa-f0-9]{7,40}\b',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'\b[A-Fa-f0-9]{7,40}\b',
+		config || null
+	)

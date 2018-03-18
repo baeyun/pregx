@@ -29,15 +29,13 @@
  * 		~/path/to/repo.git
  * 		file:///path/to/repo.git/
  * 		file://~/path/to/repo.git/
- *
- * @credit Kel Solaar <https://stackoverflow.com/users/931625/kel-solaar>
  */
-export default (str, config) => {
-	let pattern = '((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)?',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)?',
+		config || null
+	)

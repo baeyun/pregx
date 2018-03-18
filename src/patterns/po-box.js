@@ -51,15 +51,13 @@
  * 		"pobox", 
  * 		"pobox123", 
  * 		"post office box"
- *
- * @credit Dathan <https://stackoverflow.com/users/871297/dathan>
  */
-export default (str, config) => {
-	let pattern = '*((#\d+)|((box|bin)[-. \/\\]?\d+)|(.*p[ \.]? ?(o|0)[-. \/\\]? *-?((box|bin)|b|(#|num)?\d+))|(p(ost)? *(o(ff(ice)?)?)? *((box|bin)|b)? *\d+)|(p *-?\/?(o)? *-?box)|post office box|((box|bin)|b) *(number|num|#)? *\d+|(num|number|#) *\d+)',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'*((#\d+)|((box|bin)[-.\/\\]?\d+)|(.*p[\.]??(o|0)[-.\/\\]?*-?((box|bin)|b|(#|num)?\d+))|(p(ost)?*(o(ff(ice)?)?)?*((box|bin)|b)?*\d+)|(p*-?\/?(o)?*-?box)|postofficebox|((box|bin)|b)*(number|num|#)?*\d+|(num|number|#)*\d+)',
+		config || null
+	)

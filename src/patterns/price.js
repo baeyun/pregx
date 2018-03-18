@@ -25,15 +25,13 @@
  * 		2,991,234
  * 		1.234
  * 		9.321.234
- *
- * @credit https://stackoverflow.com/users/731947/cs%E1%B5%A0
  */
-export default (str, config) => {
-	let pattern = '(\d*([.,](?=\d{3}))?\d+)+((?!\2)[.,]\d\d)?',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'(\d*([.,](?=\d{3}))?\d+)+((?!\\2)[.,]\d\d)?',
+		config || null
+	)

@@ -5,15 +5,9 @@
  * after that, contains 26 to 33 characters of either a-z,
  * A-Z, 0-9, excluding O, I and l (not valid characters in
  * a Bitcoin address)
- *
- * @credit https://stackoverflow.com/users/700597/runeks
  */
-export default (str, config) => {
-	let pattern = '[13][a-km-zA-HJ-NP-Z1-9]{25,34}',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser( str, '[13][a-km-zA-HJ-NP-Z1-9]{25,34}', config || null )

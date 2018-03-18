@@ -7,15 +7,13 @@
  * however it is possible for there to be a match
  * of five digits that is not a zip code. Adding
  * to our pattern will fix that.
- *
- * @credit FrostedSyntax <https://www.codeproject.com/script/Membership/View.aspx?mid=8369714>
  */
-export default (str, config) => {
-	let pattern = '\b\d{5}(?:-\d{4})?\b',
-		flags = config && config.flags ? config.flags.join('') : ''
 
-	// For a restricted match
-	pattern = config && config.strict === true ? `^${pattern}$` : pattern
+import regexParser from '../regex-parser'
 
-	return str.match( new RegExp(pattern, flags) )
-}
+export default (str, config) =>
+	regexParser(
+		str,
+		'\b\d{5}(?:-\d{4})?\b',
+		config || null
+	)
