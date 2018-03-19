@@ -7,7 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname) + '/dist',
 		publicPath: '/dist',
-		filename: 'pregx.js'
+		filename: 'pregx.js' // pregx.min.js during minification
 	},
 	
 	module: {
