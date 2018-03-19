@@ -6,12 +6,12 @@
 	<small>Only ~92kb, no external dependencies &amp; supports all major browsers</small>
 </p>
 
-- Built-up with a ***Functional Programming Paradigm*** in mind
-- **Easy** to use and get started with
-- **Light-weight**, minified version is ~92kb
-- **No dependencies**, we tried avoiding the clutter of dependencies
-- **Consistency** across browsers (including the notorious Internet Explorer)
-- **MIT Licensed**, perfect for personal and commercial use
+> - Built-up with a ***Functional Programming Paradigm*** in mind
+> - **Easy** to use and get started with
+> - **Light-weight**, minified version is ~92kb
+> - **No dependencies**, we tried avoiding the clutter of dependencies
+> - **Consistency** across browsers (including the notorious Internet Explorer)
+> - **MIT Licensed**, perfect for personal and commercial use
 
 ## Getting started
 ### Installation
@@ -24,7 +24,7 @@ npm install pregx --save
 
 Alternatively, you may include the files in the `dist/` folder in your HTML pages:
 
-```
+```html
 <!-- DEVELOPMENT VERION -->
 <script type="text/javascript" src="./dist/pregx.js"></script>
 
@@ -36,19 +36,19 @@ Alternatively, you may include the files in the `dist/` folder in your HTML page
 #### ES6 Import Approach
 Start by either importing all functions from from `pregx`, eg:
 
-```
+```javascript
 import * as pregx from 'pregx'
 ```
 
 Or, more preferably, import only the functions you require via `destructuring`, eg:
 
-```
+```javascript
 import { getDate, getIp, getIsbn, getDomain, getUrl } from 'pregx'
 ```
 
 #### NPM / CommonJS require() Approach
 
-```
+```javascript
 var pregx = require('pregx')
 ```
 
@@ -61,7 +61,7 @@ A perfect example of PregX's usefulness would be matching credit card numbers of
 > - Visa
 > - and more...
 
-```
+```javascript
 let str = `
 My American Express credit card number is: 3400 0000 0000 009.
 My Australian BankCard‎ number is: 5610 5910 8101 8250.
@@ -84,7 +84,7 @@ console.log( pregx.getCreditCardNumber(str) )
 
 For the sake of showcasing PregX's features, namely the pattern configuration options parsed as the 2nd argument of each `get[Pattern]` function, eg:
 
-```
+```javascript
 let str1 = 'My Bitcoin wallet id is: 3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC',
     str2 = '3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'
 
