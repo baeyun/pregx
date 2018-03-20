@@ -36,6 +36,6 @@ import regexParser from '../regex-parser'
 export default (str, config) =>
 	regexParser(
 		str,
-		'((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)?',
+		'((git|ssh|http(s)?)|(git@[\\w\\.]+))(:(//)?)([\\w\\.@\\:/\\-~]+)(\\.git)(/)?',
 		config || null
 	)

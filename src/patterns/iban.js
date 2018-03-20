@@ -1,5 +1,7 @@
 /*
  * Pattern for matching International Bank Account Numbers (IBAN)
+ *
+ * @todo handle space characters in IBAN
  */
 
 import regexParser from '../regex-parser'
