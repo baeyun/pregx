@@ -1,10 +1,13 @@
+
 <h1 align="center">PregX</h1>
 
 <p align="center">
-	<strong>Powerful yet light-weight, library of 35 popular &amp; commonly used regexp patterns for JavaScript.</strong>
+	<strong>Largest library of popular &amp; commonly used RegExp patterns for JavaScript.</strong>
 	<br>
 	<small>Only ~92kb, no external dependencies &amp; supports all major browsers</small>
 </p>
+
+This package currently consists of 35 common RegExp patterns. We hoping to be the largest collection of this sort with the contribution of all who find it useful. Highlights:
 
 > - Built-up with a ***Functional Programming Paradigm*** in mind
 > - **Easy** to use and get started with
@@ -101,9 +104,9 @@ The `getBitcoin` function's pattern matches a string that starts with either the
 
 These are only but a few examples of the several **commonly used patterns** that this awesome collection contains.
 
-## API
+## [API &amp; Docs](https://github.com/bukharim96/pregx/blob/master/docs/DOCUMENTATION.md)
 
-More details are soon to come.
+For further documentation and use-case examples of all APIs, click [here](https://github.com/bukharim96/pregx/blob/master/docs/DOCUMENTATION.md) or the link above.
 
 ### Currently Supported Patterns (35)
 
