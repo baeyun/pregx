@@ -1,6 +1,6 @@
 {
   "name": "pregx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of popular &amp; commonly used regexp patterns for JavaScript",
   "main": "index.js",
   "scripts": {
