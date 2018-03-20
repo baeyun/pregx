@@ -104,10 +104,6 @@ The `getBitcoin` function's pattern matches a string that starts with either the
 
 These are only but a few examples of the several **commonly used patterns** that this awesome collection contains.
 
-## [API &amp; Docs](https://github.com/bukharim96/pregx/blob/master/docs/DOCUMENTATION.md)
-
-For further documentation and use-case examples of all APIs, click [here](https://github.com/bukharim96/pregx/blob/master/docs/DOCUMENTATION.md) or the link above.
-
 ### Currently Supported Patterns (35)
 
 - [X] alpha-numeric
@@ -145,6 +141,10 @@ For further documentation and use-case examples of all APIs, click [here](https:
 - [X] username
 - [X] uuid
 - [X] zipcode
+
+## API &amp; Docs
+
+For further documentation and use-case examples of all APIs, click [here](https://github.com/bukharim96/pregx/blob/master/docs/DOCUMENTATION.md).
 
 ## [Credits](https://github.com/bukharim96/pregx/blob/master/CREDITS.md)
 
