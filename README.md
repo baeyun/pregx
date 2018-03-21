@@ -57,17 +57,15 @@ var pregx = require('pregx')
 
 #### Use-case Examples
 
-A few perfect examples of PregX's usefulness would be:
+A few perfect examples of `PregX`'s usefulness would be:
 
 ## getCreditCardNumber()
-Supports all major credit cards types: American Express (Amex); Discover; Mastercard &amp; Visa.
-
-**NB:** This function matches Visa card numbers by default.
+> Supports all major credit cards types: American Express (Amex); Discover; Mastercard &amp; Visa. This function matches Visa card numbers by default.
 ```javascript
 let str = `
 My Visa card number: 			 4111111111111111
 My MasterCard card number: 		 5500000000000004
-My American Express card number: 370000000000009
+My American Express card number:         370000000000009
 My Discover card number: 		 6011000000000004
 `
 
@@ -85,7 +83,7 @@ console.log( getCreditCardNumber(str, { cardType: 'discover' }) )
 ```
 
 ### getBTC()
-Matches a string that starts with either **1** or **3** followed by a set of **26** to **33** characters of of the variation: **a-z**; **A-Z**; and **0-9**, excluding invalid Bitcoin address characters such as: **O**; **I**; and **l**.
+> Matches a string that starts with either **1** or **3** followed by a set of **26** to **33** characters of of the variation: **a-z**; **A-Z**; and **0-9**, excluding invalid Bitcoin address characters such as: **O**; **I**; and **l**.
 ```javascript
 let str = 'My Bitcoin wallet id is: 3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'
 
@@ -113,7 +111,7 @@ console.log( getPostalCode(str, { format: 'MT' }) ) // matches: ["BML 206"]
 ```
 
 #### getPOBox()
-Matches 'POB ...', 'PO Box ...'and 'Post Office Box ...'
+> Matches 'POB ...', 'PO Box ...'and 'Post Office Box ...'
 ```javascript
 let str = `
 Mail us at: PO Box 47369
@@ -164,7 +162,7 @@ These are only but a few examples of the several **commonly used patterns** that
 - [X] uuid
 - [X] zipcode
 
-I intend to make this package the greatest collection of its kind, and I hope to reach a ~100 patterns.
+I intend to make this package the greatest collection of its kind, and I hope to reach a **~100** patterns.
 
 ## API &amp; Docs
 
