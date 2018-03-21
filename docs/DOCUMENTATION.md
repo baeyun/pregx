@@ -1,8 +1,7 @@
 # API &amp; USE-CASE EXAMPLES
 
 ## getPostalCode()
-> Supports all global postal codes.
-That pattern by default matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all postal codes, however it is possible for there to be a match of five digits that is not a zip code.
+> Supports all global postal codes. Pattern by default matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all postal codes, however it is possible for there to be a match of five digits that is not a zip code.
 ```javascript
 let str = `
 Postal Code Examples:
