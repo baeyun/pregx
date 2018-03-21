@@ -55,52 +55,74 @@ import { getDate, getIp, getIsbn, getDomain, getUrl } from 'pregx'
 var pregx = require('pregx')
 ```
 
-### Use-case Examples
+#### Use-case Examples
 
-A perfect example of PregX's usefulness would be matching credit card numbers of a variety of providers, including but not limited to:
-> - American Express (Amex)
-> - Discover
-> - Mastercard
-> - Visa
-> - and more...
+A few perfect examples of PregX's usefulness would be:
 
+## getCreditCardNumber()
+Supports all major credit cards types: American Express (Amex); Discover; Mastercard &amp; Visa.
+
+**NB:** This function matches Visa card numbers by default.
 ```javascript
 let str = `
-My American Express credit card number is: 3400 0000 0000 009.
-My Australian BankCard‎ number is: 5610 5910 8101 8250.
-My Visa credit card number is: 4111 1111 1111 1111.
-My MasterCard card number is: 5500 0000 0000 0004.
-My Discover card number is: 6011 0000 0000 0004.
+My Visa card number: 			 4111111111111111
+My MasterCard card number: 		 5500000000000004
+My American Express card number: 370000000000009
+My Discover card number: 		 6011000000000004
 `
 
-console.log( pregx.getCreditCardNumber(str) )
+console.log( getCreditCardNumber(str) )
+// matches: ["4111111111111111"]
 
-// output:
-//  [
-//      '3400 0000 0000 009',
-//      '5610 5910 8101 8250',
-//      '4111 1111 1111 1111',
-//      '5500 0000 0000 0004',
-//      '6011 0000 0000 0004'
-//  ]
+console.log( getCreditCardNumber(str, { cardType: 'mastercard' }) )
+// matches: ["5500000000000004"]
+
+console.log( getCreditCardNumber(str, { cardType: 'amex' }) )
+// matches: ["370000000000009"]
+
+console.log( getCreditCardNumber(str, { cardType: 'discover' }) )
+// matches: ["6011000000000004"]
 ```
 
-For the sake of showcasing PregX's features, namely the pattern configuration options parsed as the 2nd argument of each `get[Pattern]` function, eg:
-
+### getBTC()
+Matches a string that starts with either **1** or **3** followed by a set of **26** to **33** characters of of the variation: **a-z**; **A-Z**; and **0-9**, excluding invalid Bitcoin address characters such as: **O**; **I**; and **l**.
 ```javascript
-let str1 = 'My Bitcoin wallet id is: 3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC',
-    str2 = '3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'
+let str = 'My Bitcoin wallet id is: 3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'
 
-/* Pattern search without the strict config */
-console.log( pregx.getBtc(str1) ) // output: ['3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC']
-console.log( pregx.getBtc(str2) ) // output: ['3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC']
-
-/* Now check what happens when the strict config is set to true */
-console.log( pregx.getBtc(str1, { strict: true }) ) // output: null
-console.log( pregx.getBtc(str2, { strict: true }) ) // output: ['3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC'] 
+console.log( getBTC(str) )
+// matches: ['3QJmV3qfvL9SuYo34YihAf3sRCW3qSinyC']
 ```
 
-The `getBitcoin` function's pattern matches a string that starts with either the number 1 or 3 and, after that, contains 26 - 33 characters of either a-z, A-Z, 0-9, excluding O, I and l (not valid characters in a Bitcoin address).
+#### getPostalCode()
+> Supports all global postal codes. Pattern by default matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all postal codes, however it is possible for there to be a match of five digits that is not a zip code.
+```javascript
+let str = `
+Postal Code Examples:
+	- Canada: A1A 1A1
+	- UK: SW1A 2AA
+	- Uzbekistan: 200100
+	- Japan: 9040205
+	- Malta: BML 2060
+`
+
+console.log( getPostalCode(str, { format: 'CA' }) ) // matches: ["A1A 1A1"]
+console.log( getPostalCode(str, { format: 'GB' }) ) // matches: ["SW1A 2AA"]
+console.log( getPostalCode(str, { format: 'UZ' }) ) // matches: ["200100"]
+console.log( getPostalCode(str, { format: 'JP' }) ) // matches: ["9040205"]
+console.log( getPostalCode(str, { format: 'MT' }) ) // matches: ["BML 206"]
+```
+
+#### getPOBox()
+Matches 'POB ...', 'PO Box ...'and 'Post Office Box ...'
+```javascript
+let str = `
+Mail us at: PO Box 47369
+Mail us at: POB 47369
+Mail us at: Post Office Box 47369
+`
+
+console.log( getPOBox(str) ) // matches: ["PO Box 47369", "POB 47369", "Post Office Box 47369"]
+```
 
 These are only but a few examples of the several **commonly used patterns** that this awesome collection contains.
 
@@ -141,6 +163,8 @@ These are only but a few examples of the several **commonly used patterns** that
 - [X] username
 - [X] uuid
 - [X] zipcode
+
+I intend to make this package the greatest collection of its kind, and I hope to reach a ~100 patterns.
 
 ## API &amp; Docs
 
