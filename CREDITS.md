@@ -1,6 +1,6 @@
 ## Credits
 
-A huge thanks to the following devs for their RegExp patterns that facilitated the compilation of PregX.
+A huge thanks to the following devs for their RegExp patterns that may have directly or indirectly facilitated the compilation of PregX.
 
 - Nerds, Rescue Me! <https://github.com/nerdsrescueme>
 	- `alpha-numeric`
@@ -8,9 +8,9 @@ A huge thanks to the following devs for their RegExp patterns that facilitated t
 	- `digits`
 	- `email`
 	- `password`
-	- `phone-numbers`
-	- `postal-code`
 	- `url`
+- GeoNames <http://download.geonames.org/export/dump/countryInfo.txt>
+	- `postal-code`
 - runeks <https://stackoverflow.com/users/700597/runeks>
 	- `btc`
 - Kel Solaar <https://stackoverflow.com/users/931625/kel-solaar>
@@ -23,8 +23,6 @@ A huge thanks to the following devs for their RegExp patterns that facilitated t
 	- `isbn (10 / 13)`
 - netcoder <https://stackoverflow.com/users/492901/netcoder>
 	- `mac-address`
-- Dathan <https://stackoverflow.com/users/871297/dathan>
-	- `po-box`
 - 731947 <https://stackoverflow.com/users/731947/cs%E1%B5%A0>
 	- `price`
 - JavaScript Cookbook by Shelley Powers <http://shop.oreilly.com/>

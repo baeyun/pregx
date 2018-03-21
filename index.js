@@ -22,12 +22,12 @@ import { default as getIPv6 } from './src/patterns/ipv6'
 import { default as getISBN } from './src/patterns/isbn'
 import { default as getMAC } from './src/patterns/mac-address'
 import { default as getMD5 } from './src/patterns/md5'
-
-// The following patterns still require thorough documentation
 import { default as getPassword } from './src/patterns/password'
 import { default as getPhoneNumber } from './src/patterns/phone-number'
-import { default as getPoBox } from './src/patterns/po-box'
+import { default as getPOBox } from './src/patterns/po-box'
 import { default as getPostalCode } from './src/patterns/postal-code'
+
+// The following patterns still require thorough documentation
 import { default as getPrice } from './src/patterns/price'
 import { default as getSha1 } from './src/patterns/sha1'
 import { default as getSha256 } from './src/patterns/sha256'

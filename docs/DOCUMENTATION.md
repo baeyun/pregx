@@ -1,5 +1,48 @@
 # API &amp; USE-CASE EXAMPLES
 
+## getPostalCode()
+> Supports all global postal codes.
+That pattern by default matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all postal codes, however it is possible for there to be a match of five digits that is not a zip code.
+```javascript
+let str = `
+Postal Code Examples:
+	- Canada: A1A 1A1
+	- UK: SW1A 2AA
+	- Uzbekistan: 200100
+	- Japan: 9040205
+	- Malta: BML 2060
+`
+
+console.log( getPostalCode(str, { format: 'CA' }) ) // matches: ["A1A 1A1"]
+console.log( getPostalCode(str, { format: 'GB' }) ) // matches: ["SW1A 2AA"]
+console.log( getPostalCode(str, { format: 'UZ' }) ) // matches: ["200100"]
+console.log( getPostalCode(str, { format: 'JP' }) ) // matches: ["9040205"]
+console.log( getPostalCode(str, { format: 'MT' }) ) // matches: ["BML 206"]
+```
+
+## getPOBox()
+Matches 'POB ...', 'PO Box ...'and 'Post Office Box ...'
+```javascript
+let str = `
+Mail us at: PO Box 47369
+Mail us at: POB 47369
+Mail us at: Post Office Box 47369
+`
+
+console.log( getPOBox(str) ) // matches: ["PO Box 47369", "POB 47369", "Post Office Box 47369"]
+```
+
+## getPhoneNumber()
+This patter will match 10-digit North American telephone number. Separators are not required, but can include spaces, hyphens, or periods. Parentheses around the area code are also optional.
+```javascript
+let str = `
+My phone no. with no seperation: 0768758682
+My phone no. with spaces:        076 875 8682
+My phone no. with dashes:        076-875-8682
+`
+console.log( getPhoneNumber(str) ) // matches: ["0768758682", "076 875 8682", "076-875-8682"]
+```
+
 ## getPassword()
 ```javascript
 // Example seems redundant
