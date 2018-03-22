@@ -23,8 +23,6 @@ A huge thanks to the following devs for their RegExp patterns that may have dire
 	- `isbn (10 / 13)`
 - netcoder <https://stackoverflow.com/users/492901/netcoder>
 	- `mac-address`
-- 731947 <https://stackoverflow.com/users/731947/cs%E1%B5%A0>
-	- `price`
 - JavaScript Cookbook by Shelley Powers <http://shop.oreilly.com/>
 	- `ssn`
 - FrostedSyntax <https://www.codeproject.com/script/Membership/View.aspx?mid=8369714>
@@ -32,7 +30,5 @@ A huge thanks to the following devs for their RegExp patterns that may have dire
 	- `us-state-abbrev`
 	- `us-state`
 	- `zipcode`
-- sergo <https://stackoverflow.com/users/685410/sergo>
-	- `time`
 - Gambol <https://stackoverflow.com/users/1867535/gambol>
 	- `uuid`
