@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bukharim96/pregx/master/assets/PregX_logo.png" />
+  <img style="max-width:640px;" src="https://raw.githubusercontent.com/bukharim96/pregx/master/assets/PregX_logo.png" />
 </p>
 
 <p align="center">
