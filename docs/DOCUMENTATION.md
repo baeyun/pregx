@@ -1,5 +1,99 @@
 # API &amp; USE-CASE EXAMPLES
 
+## getZipcode()
+That pattern matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all zip codes, however it is possible for there to be a match of five digits that is not a zip code.
+```javascript
+let str = 'My Zipcode is: 20607-6459'
+console.log( getZipcode(str) ) // matches: ["20607-6459"]
+```
+
+## getUUID()
+```javascript
+let str = 'A sample Universally Unique Identifier: 3115108c-2e05-11e8-b467-0ed5f89f718b'
+console.log( getUUID(str) ) // matches: ["3115108c-2e05-11e8-b467-0ed5f89f718b"]
+```
+
+## getUsername()
+`// It basically validates a username against the mpst common standard pattern.`
+
+## getUSState()
+```javascript
+let str = 'I in 32 Pyramid Street, New York, US'
+console.log( getUSState(str) ) // matches: ["New York"]
+```
+
+## getUSStateAbbrev()
+```javascript
+let str = 'I in 32 Pyramid Street, NY, US'
+console.log( getUSStateAbbrev(str) ) // matches: ["NY"]
+```
+
+## getURL()
+This URL regex will validate most common URL formats correctly
+```javascript
+let str = 'Fork this awesome package at: https://github.com/bukharim96/pregx'
+console.log( getURL(str) ) // matches: ["http://github.com/bukharim96/pregx"]
+```
+
+## getURLSlug()
+```javascript
+let str = 'wp-content/uploads/2017/12/hello-world.txt'
+console.log( getURLSlug(str) ) // matches: ["wp-content", "uploads", "2017", "12", "hello-world", "txt"]
+```
+
+## getTime()
+Matches this format: `HH:MM:SS [PM/AM]`.
+```javascript
+let str = `
+I wrote this at: 8:31:53 PM
+I completed testing it at: 8:40:05 PM
+I'll go to sleep at: 01:30 AM`
+console.log( getTime(str) ) // matches: ["8:31:53 PM", "8:40:05 PM", "1:30 AM"]
+```
+
+## getStreetAddress()
+Strictly matches street addresses.
+```javascript
+let str = `
+My home address: 75 Strawberry Lane, Virginia, US
+I work at: 463 Big Square Boulevard, Virginia, US`
+console.log( getStreetAddress(str) ) // matches: ["75 Strawberry Lane", "463 Big Square Boulevard"]
+```
+
+## getSSN()
+```javascript
+let str = 'My example Social Security Number: 444-33-2222'
+console.log( getSSN(str) ) // matches: ["444-33-2222"]
+```
+
+## getSHA256()
+```javascript
+let str = `
+SHA1 hex of 'The quick brown fox jumps over the lazy dog' is:
+D7A8FBB307D7809469CA9ABCB0082E4F8D5651E46D3CDB762D02D0BF37C9E592`
+console.log( getSHA256(str) ) // matches: ["D7A8FBB307D7809469CA9ABCB0082E4F8D5651E46D3CDB762D02D0BF37C9E592"]
+```
+
+## getSHA1()
+```javascript
+let str = `
+SHA1 hex of 'The quick brown fox jumps over the lazy dog' is:
+2FD4E1C67A2D28FCED849EE1BB76E7391B93EB12`
+console.log( getSHA1(str) ) // matches: ["2FD4E1C67A2D28FCED849EE1BB76E7391B93EB12"]
+```
+
+## getPrice()
+Matches all the following cases.
+```javascript
+let str = `
+Item Price:   $ 99.99
+Total:        £ 123, 99
+Your balance: €120 00
+`
+console.log( getPrice(str) ) // matches: ["$ 99.99", "£ 123, 99", "€120 00"]
+console.log( getPrice(str, { matchCurrency: false }) ) // matches: ["99.99", "123, 99", "120 00"]
+```
+
 ## getPostalCode()
 > Supports all global postal codes. Pattern by default matches five primary digits and allows the option of having a hyphen and four extended digits. This matches all postal codes, however it is possible for there to be a match of five digits that is not a zip code.
 ```javascript
