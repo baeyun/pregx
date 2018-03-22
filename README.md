@@ -1,5 +1,6 @@
-
-<h1 align="center">PregX</h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bukharim96/pregx/master/assets/PregX_logo.png" />
+</p>
 
 <p align="center">
 	<strong>Largest library of popular &amp; commonly used RegExp patterns for JavaScript.</strong>
