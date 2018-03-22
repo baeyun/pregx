@@ -1,37 +1,13 @@
 /*
  * Pattern for matching price
- *
- * USAGE:
- *
- * International format for the en_US locale & US national format:
- * 		134.56
- * 		1,234.56
- * 		2,991,234.00
- *
- * Italian national format with 2 decimals:
- * 		134,56
- * 		21.234,56
- * 		1.234,56
- * 		9.321.234,56
- *
- * International format for the de_DE locale:
- * 		134,56
- * 		1234,56
- * 		98281234,56
- *
- * Decimals are optional, validation for whole amounts:
- * 		1234
- * 		1,234
- * 		2,991,234
- * 		1.234
- * 		9.321.234
  */
 
 import regexParser from '../regex-parser'
 
-export default (str, config) =>
-	regexParser(
-		str,
-		'(\d*([.,](?=\d{3}))?\d+)+((?!\\2)[.,]\d\d)?',
-		config || null
-	)
+export default (str, config) => {
+	let pattern = (config && !config.matchCurrency)
+		? '(\\d+[,\\.\\s]+\\d+)\\b'
+		: '([\\$\\xA2-\\xA5\\u058F\\u060B\\u09F2\\u09F3\\u09FB\\u0AF1\\u0BF9\\u0E3F\\u17DB\\u20A0-\\u20BD\\uA838\\uFDFC\\uFE69\\uFF04\\uFFE0\\uFFE1\\uFFE5\\uFFE6]?\\s?\\d+[,\\.\\s]+\\d+)\\b'
+
+	return regexParser( str, pattern, config || null ) || false
+}
