@@ -8,6 +8,31 @@
 	<small>Only ~92kb, no external dependencies &amp; supports all major browsers</small>
 </p>
 
+<p class="rich-diff-level-zero" align="center">
+	<a href="https://github.com/bukharim96/pregx/blob/master/package.json" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/a0aa77f4944442dabbb8c5a8a3c751c23898e759/68747470733a2f2f64617669642d646d2e6f72672f62756b686172696d39362f70726567782e737667" alt="dependencies" data-canonical-src="https://david-dm.org/bukharim96/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://badge.fury.io/js/pregx" rel="nofollow" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/623e2f84b59900a4091f658b6c3a3052e464c34c/68747470733a2f2f62616467652e667572792e696f2f6a732f70726567782e737667" alt="npm version" data-canonical-src="https://badge.fury.io/js/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://github.com/bukharim96/pregx/issues" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/305793f485a40f755c997b155ecf8a37c1b27b76/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f62756b686172696d39362f70726567782e737667" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/bukharim96/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://github.com/bukharim96/pregx/network" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/0a015eaf16d767f6564707fafc53a2c6a6bdf876/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f62756b686172696d39362f70726567782e737667" alt="GitHub forks" data-canonical-src="https://img.shields.io/github/forks/bukharim96/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://github.com/bukharim96/pregx/stargazers" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/741513f5637483dbc0323cf452fc0f01b47f4b05/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f62756b686172696d39362f70726567782e737667" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/bukharim96/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://github.com/bukharim96/pregx/blob/master/LICENSE" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/8af1af5c402a37c2066dd9148871316ee566d2fe/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f62756b686172696d39362f70726567782e737667" alt="GitHub license" data-canonical-src="https://img.shields.io/github/license/bukharim96/pregx.svg" style="max-width:100%;">
+	</a>
+	<a href="https://twitter.com/intent/tweet?text=Wow:&amp;url=https%3A%2F%2Fgithub.com%2Fbukharim96%2Fpregx" rel="nofollow" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/43481b6b18645bb992ee2d33bed4b617d7b812ab/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c2f68747470732f6769746875622e636f6d2f62756b686172696d39362f70726567782e7376673f7374796c653d736f6369616c" alt="Twitter" data-canonical-src="https://img.shields.io/twitter/url/https/github.com/bukharim96/pregx.svg?style=social" style="max-width:100%;">
+	</a>
+</p>
+
+
 This package currently consists of 35 common RegExp patterns. We hoping to be the largest collection of this sort with the contribution of all who find it useful. Highlights:
 
 > - Built-up with a ***Functional Programming Paradigm*** in mind
