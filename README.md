@@ -9,6 +9,9 @@
 </p>
 
 <p class="rich-diff-level-zero" align="center">
+	<a href="http://inch-ci.org/github/bukharim96/pregx" rel="nofollow" class="rich-diff-level-one">
+		<img src="https://camo.githubusercontent.com/a9764da709f446351197ab0f6e33816aef715bff/687474703a2f2f696e63682d63692e6f72672f6769746875622f62756b686172696d39362f70726567782e7376673f6272616e63683d6d6173746572" alt="Inline docs" data-canonical-src="http://inch-ci.org/github/bukharim96/pregx.svg?branch=master" style="max-width:100%;">
+	</a>
 	<a href="https://github.com/bukharim96/pregx/blob/master/package.json" class="rich-diff-level-one">
 		<img src="https://camo.githubusercontent.com/a0aa77f4944442dabbb8c5a8a3c751c23898e759/68747470733a2f2f64617669642d646d2e6f72672f62756b686172696d39362f70726567782e737667" alt="dependencies" data-canonical-src="https://david-dm.org/bukharim96/pregx.svg" style="max-width:100%;">
 	</a>
@@ -31,7 +34,6 @@
 		<img src="https://camo.githubusercontent.com/43481b6b18645bb992ee2d33bed4b617d7b812ab/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f75726c2f68747470732f6769746875622e636f6d2f62756b686172696d39362f70726567782e7376673f7374796c653d736f6369616c" alt="Twitter" data-canonical-src="https://img.shields.io/twitter/url/https/github.com/bukharim96/pregx.svg?style=social" style="max-width:100%;">
 	</a>
 </p>
-
 
 This package currently consists of 35 common RegExp patterns. We hoping to be the largest collection of this sort with the contribution of all who find it useful. Highlights:
 
