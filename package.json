@@ -2,6 +2,7 @@
   "name": "pregx",
   "version": "1.1.1",
   "description": "A collection of popular &amp; commonly used regexp patterns for JavaScript",
+  "keywords": ["regex","regexp","regular expression", "common regex", "popular regex"],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
