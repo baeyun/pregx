@@ -37,7 +37,7 @@
 
 This package currently consists of 35 common RegExp patterns. We hoping to be the largest collection of this sort with the contribution of all who find it useful. Highlights:
 
-> - Built-up with a ***Functional Programming Paradigm*** in mind
+> - Mostlty ***Functional***
 > - **Easy** to use and get started with
 > - **Light-weight**, minified version is ~92kb
 > - **No dependencies**, we tried avoiding the clutter of dependencies
